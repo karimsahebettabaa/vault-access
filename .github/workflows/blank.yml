@@ -27,7 +27,7 @@ jobs:
         tlsSkipVerify: true
         token: ${{ secrets.VAULT_TOKEN }}
         secrets: |
-          /cubbyhole/my-secret | my-value ;
+          /cubbyhole/my-secret my-value | my-value ;
          
     
 
