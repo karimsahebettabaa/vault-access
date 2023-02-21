@@ -23,9 +23,15 @@ jobs:
       env:
             ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       with:
-        url: http://34.76.74.200:8200
+        url: https://34.76.74.200:8200
         token: ${{ secrets.VAULT_TOKEN }}
         
+    - name: 'export VAULT_ADDR'
+      run: 'export VAULT_ADDR="http://127.0.0.1:8200"'
+    
+    - name: 'export VAULT_TOKEN'
+      run: 'export VAULT_TOKEN="s.JXkjRi7cdIJDWud4JIAW5QQx"'
+      
     - name: 'List vault secrets'
       run: 'vault secrets list'
   
