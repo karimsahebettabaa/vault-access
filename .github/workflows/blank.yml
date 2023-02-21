@@ -25,18 +25,10 @@ jobs:
       with:
         url: https://34.76.74.200:8200
         token: ${{ secrets.VAULT_TOKEN }}
+        secrets: |
+          /kv/my-secret my-value ;
         
-    - name: 'export VAULT_ADDR'
-      run: 'export VAULT_ADDR="http://34.76.74.200:8200"'
     
-    - name: 'export VAULT_TOKEN'
-      run: 'export VAULT_TOKEN="s.JXkjRi7cdIJDWud4JIAW5QQx"'
-      
-    - name: 'Just echo'
-      run: 'echo "Hello" '
-  
-    - name: 'List vault secrets'
-      run: 'vault secrets list'
 
     
       
