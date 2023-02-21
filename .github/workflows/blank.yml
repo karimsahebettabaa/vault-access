@@ -1,4 +1,4 @@
-name: Build and Access
+name: Build and Access Vault
 
 on:
   push:
