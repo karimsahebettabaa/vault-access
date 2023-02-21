@@ -26,8 +26,8 @@ jobs:
         url: https://34.76.74.200:8200
         token: ${{ secrets.VAULT_TOKEN }}
         secrets: |
-          /kv/my-secret my-value | NAMED_SECRET ;
-        
+          /kv/ my-secret  | my-value ;
+         
     
 
     
