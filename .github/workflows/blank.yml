@@ -20,8 +20,10 @@ jobs:
       
     - name: Test Vault Action (default KV V2)
       uses: hashicorp/vault-action@v2.5.0
+      env:
+            ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
       with:
-        url: http://130.211.105.205/:8200
+        url: http://34.76.74.200:8200
         token: ${{ secrets.VAULT_TOKEN }}
         
     - name: 'List vault secrets'
